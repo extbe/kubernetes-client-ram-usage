@@ -13,7 +13,7 @@ func main() {
 	app.Use(recover.New())
 	app.Use(pprof.New())
 
-	app.Post("/charts/install", func(ctx *fiber.Ctx) error {
+	app.Post("/openapiSchemas", func(ctx *fiber.Ctx) error {
 		r, err := installChart()
 		if err != nil {
 			return err
